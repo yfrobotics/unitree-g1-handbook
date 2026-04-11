@@ -1,0 +1,60 @@
+site_name: Unitree G1 Handbook
+site_description: Everything about Unitree G1 for beginners
+site_url: ""
+repo_url: https://github.com/automaticdai/unitree-g1-handbook
+repo_name: automaticdai/unitree-g1-handbook
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Unboxing: getting-started/unboxing.md
+      - Remote Control: getting-started/remote-control.md
+      - Safety: getting-started/safety.md
+  - Networking:
+      - Connect to the Robot: networking/connect-to-robot.md
+      - Connect to Internet: networking/connect-to-internet.md
+  - Development:
+      - SDK Setup: development/sdk-setup.md
+      - Hand SDK & Manipulation: development/hand-sdk.md
+      - ROS2 Integration: development/ros2.md
+      - Simulation: development/simulation.md
+  - Hardware:
+      - Specs & Components: hardware/specs.md
+      - Sensors & Perception: hardware/sensors.md
+  - Troubleshooting: troubleshooting.md
