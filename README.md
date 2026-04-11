@@ -11,3 +11,7 @@ Everything about Unitree G1 for beginners. It could be both exciting and frustra
 - Development (SDK, Hand SDK, ROS2, simulation)
 - Hardware (specs, sensors)
 - Troubleshooting
+
+## Issues
+
+For any issues, you can send a pull request or raise an issue.
