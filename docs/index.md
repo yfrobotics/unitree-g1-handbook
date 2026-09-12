@@ -1,64 +1,64 @@
-# Unitree G1 Handbook
+# 宇树 G1 使用手册
 
-**A practical guide to the Unitree G1 humanoid robot for researchers and developers.**
+**面向研究人员和开发者的宇树 G1 人形机器人实用指南。**
 
-It can be both exciting and frustrating to use G1 as a first-time user. This handbook is written while exploring the robot, and focuses on the **G1 EDU version** — targeting those who do research and development with G1.
+初次使用 G1 时，你可能既感到兴奋，也会遇到令人头疼的问题。本手册是在探索机器人的过程中编写的，重点介绍 **G1 EDU 版本**，面向使用 G1 开展研究和开发的读者。
 
-!!! tip "New to G1?"
-    Start with [Unboxing](getting-started/unboxing.md) to get your robot powered on, then follow the [Networking](networking/connect-to-robot.md) guide to establish a connection.
+!!! tip "初次使用 G1？"
+    请先阅读[开箱指南](getting-started/unboxing.md)，完成机器人开机，再按照[网络连接指南](networking/connect-to-robot.md)建立连接。
 
 ---
 
-## Quick Navigation
+## 快速导航
 
 <div class="grid cards" markdown>
 
--   :material-package-variant:{ .lg .middle } **Getting Started**
+-   :material-package-variant:{ .lg .middle } **入门指南**
 
     ---
 
-    Unboxing, first boot, remote control basics, and safety guidelines.
+    开箱、首次开机、遥控器基本操作及安全注意事项。
 
-    [:octicons-arrow-right-24: Get started](getting-started/unboxing.md)
+    [:octicons-arrow-right-24: 开始使用](getting-started/unboxing.md)
 
--   :material-wifi:{ .lg .middle } **Networking**
-
-    ---
-
-    Connect to the robot via Ethernet/Wi-Fi and set up Internet access.
-
-    [:octicons-arrow-right-24: Network setup](networking/connect-to-robot.md)
-
--   :material-code-braces:{ .lg .middle } **Development**
+-   :material-wifi:{ .lg .middle } **网络连接**
 
     ---
 
-    SDK setup, Hand SDK, ROS2 integration, and simulation environments.
+    通过以太网或 Wi-Fi 连接机器人，并配置互联网访问。
 
-    [:octicons-arrow-right-24: Start developing](development/sdk-setup.md)
+    [:octicons-arrow-right-24: 配置网络](networking/connect-to-robot.md)
 
--   :material-chip:{ .lg .middle } **Hardware**
-
-    ---
-
-    Specifications, components, sensors, and perception capabilities.
-
-    [:octicons-arrow-right-24: Hardware details](hardware/specs.md)
-
--   :material-wrench:{ .lg .middle } **Troubleshooting**
+-   :material-code-braces:{ .lg .middle } **开发指南**
 
     ---
 
-    Common issues, error codes, and solutions from real-world usage.
+    SDK 配置、灵巧手 SDK、ROS2 集成及仿真环境。
 
-    [:octicons-arrow-right-24: Find solutions](troubleshooting.md)
+    [:octicons-arrow-right-24: 开始开发](development/sdk-setup.md)
+
+-   :material-chip:{ .lg .middle } **硬件**
+
+    ---
+
+    规格、组件、传感器及感知能力。
+
+    [:octicons-arrow-right-24: 了解硬件](hardware/specs.md)
+
+-   :material-wrench:{ .lg .middle } **故障排查**
+
+    ---
+
+    实际使用中的常见问题、错误代码及解决方法。
+
+    [:octicons-arrow-right-24: 查找解决方法](troubleshooting.md)
 
 </div>
 
 ---
 
-## About This Handbook
+## 关于本手册
 
-This is an unofficial, community-driven handbook. It is not affiliated with or endorsed by Unitree Robotics. The content is based on hands-on experience with the G1 EDU and aims to fill gaps left by the official documentation.
+本手册由社区编写，属于非官方资料，与宇树科技无关联，也未获得其背书。内容基于 G1 EDU 的实际使用经验，旨在补充官方文档中未充分覆盖的内容。
 
-**Contributing** — Found an error or want to add something? Contributions are welcome on [GitHub](https://github.com/automaticdai/unitree-g1-handbook).
+**参与贡献**——发现错误或希望补充内容？欢迎在 [GitHub](https://github.com/yfrobotics/unitree-g1-handbook) 上参与贡献。

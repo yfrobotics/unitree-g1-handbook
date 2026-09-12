@@ -1,6 +1,6 @@
-# Specs & Components
+# 规格与组件
 
-Hardware specifications and component overview for the G1 EDU.
+G1 EDU 的硬件规格与组件概览。
 
-!!! note "Work in progress"
-    This page is under construction. Contributions are welcome!
+!!! note "内容编写中"
+    本页仍在完善中，欢迎参与贡献！

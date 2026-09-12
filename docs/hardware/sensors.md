@@ -1,6 +1,6 @@
-# Sensors & Perception
+# 传感器与感知
 
-Sensor data and perception capabilities of the G1.
+G1 的传感器数据与感知能力。
 
-!!! note "Work in progress"
-    This page is under construction. Contributions are welcome!
+!!! note "内容编写中"
+    本页仍在完善中，欢迎参与贡献！

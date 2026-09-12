@@ -1,44 +1,44 @@
-# Connect to the Robot
+# 连接机器人
 
-You may find the [official development guide](https://support.unitree.com/home/en/G1_developer) useful but it somehow was made in a way that assumes you are already familiar with the robot, but to most of us this is likely to be our first time playing with a humanoid robot like G1.
+[官方开发指南](https://support.unitree.com/home/en/G1_developer)可能对你有所帮助，但它的写法似乎默认读者已经熟悉这台机器人。然而，对我们大多数人来说，这很可能是第一次接触 G1 这样的人形机器人。
 
-## Computers on G1
+## G1 上的计算机
 
-There are two computers on G1:
+G1 配备了两台计算机：
 
-- **A high-level computer** (using a Jetson Orin)
-- **A low-level computer** (this is the motion controller)
+- **高层计算机**（采用 Jetson Orin）
+- **底层计算机**（即运动控制器）
 
-Basically what you should do is to connect your PC to the high-level computer.
+你需要做的就是将自己的电脑连接到高层计算机。
 
-## Connection Options
+## 连接方式
 
-You can directly connect the robot to your PC:
-
-```
-G1 <--(wired)--> PC
-```
-
-Or with a router, which is easier for G1 to access the Internet:
+可以将机器人直接连接到电脑：
 
 ```
-G1 <--(wired)--> Router <--(wired or wireless)--> PC
+G1 <--（有线）--> 电脑
 ```
 
-## Network Configuration
+也可以通过路由器连接，这样更方便让 G1 访问互联网：
 
-The IP address of G1 is `192.168.123.164`. You should make sure you are within the subdomain (`192.168.123.x`) of the robot.
+```
+G1 <--（有线）--> 路由器 <--（有线或无线）--> 电脑
+```
 
-To test the connection, ping the robot:
+## 网络配置
+
+G1 的 IP 地址为 `192.168.123.164`。请确保你的电脑与机器人处于同一子网（`192.168.123.x`）。
+
+使用 ping 命令测试连接：
 
 ```bash
 ping 192.168.123.164
 ```
 
-You should then be ready to connect to the robot with SSH:
+随后即可通过 SSH 连接机器人：
 
 ```bash
 ssh unitree@192.168.123.164
 ```
 
-When prompted, the default password is `123`.
+系统提示输入密码时，默认密码为 `123`。

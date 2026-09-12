@@ -1,6 +1,6 @@
-# Hand SDK & Manipulation
+# 灵巧手 SDK 与操作
 
-Using the Hand SDK for dexterous manipulation with the G1.
+使用灵巧手 SDK 让 G1 完成灵巧操作。
 
-!!! note "Work in progress"
-    This page is under construction. Contributions are welcome!
+!!! note "内容编写中"
+    本页仍在完善中，欢迎参与贡献！

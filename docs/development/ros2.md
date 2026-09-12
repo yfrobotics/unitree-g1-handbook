@@ -1,6 +1,6 @@
-# ROS2 Integration
+# ROS2 集成
 
-Integrating the G1 with ROS2 for advanced robotics development.
+将 G1 与 ROS2 集成，开展进阶机器人开发。
 
-!!! note "Work in progress"
-    This page is under construction. Contributions are welcome!
+!!! note "内容编写中"
+    本页仍在完善中，欢迎参与贡献！

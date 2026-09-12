@@ -1,6 +1,6 @@
-# Simulation
+# 仿真
 
-Simulating the G1 in environments like Isaac Sim and Gazebo.
+在 Isaac Sim、Gazebo 等环境中对 G1 进行仿真。
 
-!!! note "Work in progress"
-    This page is under construction. Contributions are welcome!
+!!! note "内容编写中"
+    本页仍在完善中，欢迎参与贡献！

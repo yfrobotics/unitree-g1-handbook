@@ -1,6 +1,6 @@
-# Safety Guidelines
+# 安全指南
 
-Important safety considerations when working with the G1 robot.
+使用 G1 机器人时的重要安全注意事项。
 
-!!! note "Work in progress"
-    This page is under construction. Contributions are welcome!
+!!! note "内容编写中"
+    本页仍在完善中，欢迎参与贡献！

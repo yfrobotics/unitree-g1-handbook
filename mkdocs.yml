@@ -1,24 +1,25 @@
-site_name: Unitree G1 Handbook
-site_description: Everything about Unitree G1 for beginners
+site_name: 宇树 G1 使用手册
+site_description: 面向初学者的宇树 G1 使用指南
 site_url: ""
-repo_url: https://github.com/automaticdai/unitree-g1-handbook
-repo_name: automaticdai/unitree-g1-handbook
+repo_url: https://github.com/yfrobotics/unitree-g1-handbook
+repo_name: yfrobotics/unitree-g1-handbook
 
 theme:
   name: material
+  language: zh
   palette:
     - scheme: default
       primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-7
-        name: Switch to dark mode
+        name: 切换至深色模式
     - scheme: slate
       primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: 切换至浅色模式
   features:
     - navigation.sections
     - navigation.expand
@@ -41,20 +42,20 @@ markdown_extensions:
   - md_in_html
 
 nav:
-  - Home: index.md
-  - Getting Started:
-      - Unboxing: getting-started/unboxing.md
-      - Remote Control: getting-started/remote-control.md
-      - Safety: getting-started/safety.md
-  - Networking:
-      - Connect to the Robot: networking/connect-to-robot.md
-      - Connect to Internet: networking/connect-to-internet.md
-  - Development:
-      - SDK Setup: development/sdk-setup.md
-      - Hand SDK & Manipulation: development/hand-sdk.md
-      - ROS2 Integration: development/ros2.md
-      - Simulation: development/simulation.md
-  - Hardware:
-      - Specs & Components: hardware/specs.md
-      - Sensors & Perception: hardware/sensors.md
-  - Troubleshooting: troubleshooting.md
+  - 首页: index.md
+  - 入门指南:
+      - 开箱: getting-started/unboxing.md
+      - 遥控器使用: getting-started/remote-control.md
+      - 安全指南: getting-started/safety.md
+  - 网络连接:
+      - 连接机器人: networking/connect-to-robot.md
+      - 连接互联网: networking/connect-to-internet.md
+  - 开发指南:
+      - SDK 配置: development/sdk-setup.md
+      - 灵巧手 SDK 与操作: development/hand-sdk.md
+      - ROS2 集成: development/ros2.md
+      - 仿真: development/simulation.md
+  - 硬件:
+      - 规格与组件: hardware/specs.md
+      - 传感器与感知: hardware/sensors.md
+  - 故障排查: troubleshooting.md

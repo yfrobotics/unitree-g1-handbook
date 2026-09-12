@@ -1,6 +1,6 @@
-# Remote Control
+# 遥控器使用
 
-How to use the remote controller to operate the G1.
+如何使用遥控器操作 G1。
 
-!!! note "Work in progress"
-    This page is under construction. Contributions are welcome!
+!!! note "内容编写中"
+    本页仍在完善中，欢迎参与贡献！

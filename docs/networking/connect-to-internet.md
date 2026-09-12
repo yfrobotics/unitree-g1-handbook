@@ -1,6 +1,6 @@
-# Connect to Internet
+# 连接互联网
 
-How to set up Internet access on the G1 robot.
+如何为 G1 机器人配置互联网访问。
 
-!!! note "Work in progress"
-    This page is under construction. Contributions are welcome!
+!!! note "内容编写中"
+    本页仍在完善中，欢迎参与贡献！

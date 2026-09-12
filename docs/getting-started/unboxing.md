@@ -1,5 +1,5 @@
-# Unboxing G1
+# G1 开箱
 
-The first step is to unbox the robot. You need two people to do that as the robot is very heavy (35kg+) to get outside from the box. Make sure you assemble the crane first if it comes with the robot. If not, you may lay the robot down on the ground with its face up.
+第一步是将机器人从包装箱中取出。机器人很重（超过 35 千克），需要两个人一起搬出。如果随机器人附带了吊架，请务必先将其组装好。如果没有吊架，可以让机器人面朝上平躺在地面上。
 
-Boot and start the robot following the manual that ships with G1. You can test some basic pre-built movements with the remote controller, and meanwhile record some very cool videos to show off to your friends.
+按照 G1 随附的说明书启动机器人。你可以使用遥控器测试一些预设的基本动作，同时录制一些酷炫的视频，与朋友分享。
