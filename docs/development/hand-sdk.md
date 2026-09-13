@@ -64,3 +64,5 @@ ros2 topic echo /lf/dex3/left/state --once --qos-reliability best_effort
 建议将目标位姿、手指目标、实际关节反馈和图像时间戳一起记录。出现物体滑落时，先判断定位误差、接触姿态、目标范围还是控制延迟，再调整抓取策略。
 
 需要手臂和末端的遥操作或数据采集，可进一步参考宇树 [`xr_teleoperate`](https://github.com/unitreerobotics/xr_teleoperate)及其支持的具体配置。先在[仿真环境](simulation.md)验证，遇到无状态、单侧无响应或温度异常时参阅[故障排查](../troubleshooting.md)。
+
+将演示用于学习抓取策略时，继续阅读[开源数据集集合](../learning/datasets.md)和 [VLA](../learning/vla.md)，核对末端动作表示、数据格式和训练部署流程。

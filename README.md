@@ -9,6 +9,7 @@
 - 入门指南（开箱、遥控器使用、安全注意事项）
 - 网络连接（连接机器人、访问互联网）
 - 开发指南（SDK、灵巧手 SDK、ROS2、仿真）
+- 具身学习（开源数据集集合、VLA 模型与 G1 适配）
 - 硬件（规格、传感器）
 - 故障排查
 
@@ -21,6 +22,8 @@
 首次使用请先阅读[安全指南](docs/getting-started/safety.md)和[开箱指南](docs/getting-started/unboxing.md)。开发者可继续完成[有线连接](docs/networking/connect-to-robot.md)、[SDK 配置](docs/development/sdk-setup.md)和 [ROS2 状态读取](docs/development/ros2.md)，再进入[仿真](docs/development/simulation.md)与实机联调。
 
 正文按实际操作流程组织，包含前置条件、配置步骤、结果检查和官方来源。硬件与固件存在版本差异，请先核对交付配置。
+
+操作学习资源见[开源数据集集合](docs/learning/datasets.md)和 [VLA：视觉、语言与动作](docs/learning/vla.md)，涵盖 G1 官方数据、跨机型数据、模型入口及训练评测建议。
 
 ## 本地预览
 

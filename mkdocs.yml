@@ -55,6 +55,9 @@ nav:
       - 灵巧手 SDK 与操作: development/hand-sdk.md
       - ROS2 集成: development/ros2.md
       - 仿真: development/simulation.md
+  - 具身学习:
+      - 开源数据集集合: learning/datasets.md
+      - VLA：视觉、语言与动作: learning/vla.md
   - 硬件:
       - 规格与组件: hardware/specs.md
       - 传感器与感知: hardware/sensors.md

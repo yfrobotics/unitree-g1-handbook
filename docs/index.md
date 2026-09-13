@@ -15,11 +15,14 @@
 
 每一步先检查预期结果，再进入下一步。如果只做数据采集，可以先阅读 ROS2 和传感器页面；如果开发抓取任务，还需核对灵巧手和手臂配置。
 
+开展操作学习时，可从[开源数据集集合](learning/datasets.md)了解数据来源与格式，再阅读 [VLA](learning/vla.md)，规划模型适配、训练和评测流程。
+
 ## 目录
 
 - 入门：[开箱与首次使用](getting-started/unboxing.md)、[遥控器](getting-started/remote-control.md)、[安全指南](getting-started/safety.md)。
 - 网络：[连接机器人](networking/connect-to-robot.md)、[连接互联网](networking/connect-to-internet.md)。
 - 开发：[SDK 配置](development/sdk-setup.md)、[灵巧手 SDK](development/hand-sdk.md)、[ROS2 集成](development/ros2.md)、[仿真](development/simulation.md)。
+- 具身学习：[开源数据集集合](learning/datasets.md)、[VLA：视觉、语言与动作](learning/vla.md)。
 - 硬件：[规格与组件](hardware/specs.md)、[传感器与感知](hardware/sensors.md)。
 - [故障排查](troubleshooting.md)：按现象定位网络、软件、遥控和传感器问题。
 
