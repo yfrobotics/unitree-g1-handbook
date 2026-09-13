@@ -1,49 +1,49 @@
-# MkDocs Wiki Setup - Design Spec
+# MkDocs Wiki 搭建方案
 
-## Overview
+## 概述
 
-Set up a MkDocs Material wiki for the Unitree G1 Handbook repo, deployed to GitHub Pages via GitHub Actions.
+为宇树 G1 使用手册仓库搭建基于 MkDocs Material 的 Wiki，并通过 GitHub Actions 部署到 GitHub Pages。
 
-## Site Structure
+## 网站结构
 
 ```
 docs/
-├── index.md                    (Home - intro to the handbook)
+├── index.md                    （首页：手册简介）
 ├── getting-started/
-│   ├── unboxing.md             (Unboxing & first boot)
-│   ├── remote-control.md       (Remote controller usage) [placeholder]
-│   └── safety.md               (Safety guidelines) [placeholder]
+│   ├── unboxing.md             （开箱与首次开机）
+│   ├── remote-control.md       （遥控器使用）[占位页]
+│   └── safety.md               （安全指南）[占位页]
 ├── networking/
-│   ├── connect-to-robot.md     (SSH, IP setup)
-│   ├── connect-to-internet.md  (Internet access via router) [placeholder]
+│   ├── connect-to-robot.md     （SSH、IP 配置）
+│   ├── connect-to-internet.md  （通过路由器访问互联网）[占位页]
 ├── development/
-│   ├── sdk-setup.md            (Download & compile SDK)
-│   ├── hand-sdk.md             (Hand SDK & manipulation) [placeholder]
-│   ├── ros2.md                 (ROS2 integration) [placeholder]
-│   └── simulation.md           (Isaac Sim, Gazebo) [placeholder]
+│   ├── sdk-setup.md            （下载并编译 SDK）
+│   ├── hand-sdk.md             （灵巧手 SDK 与操作）[占位页]
+│   ├── ros2.md                 （ROS2 集成）[占位页]
+│   └── simulation.md           （Isaac Sim、Gazebo）[占位页]
 ├── hardware/
-│   ├── specs.md                (Hardware specs & components) [placeholder]
-│   └── sensors.md              (Sensor data & perception) [placeholder]
-└── troubleshooting.md          (FAQ & troubleshooting) [placeholder]
+│   ├── specs.md                （硬件规格与组件）[占位页]
+│   └── sensors.md              （传感器数据与感知）[占位页]
+└── troubleshooting.md          （常见问题与故障排查）[占位页]
 ```
 
-## Configuration
+## 配置
 
-- **Theme:** Material for MkDocs with dark/light toggle and search
-- **Navigation:** Explicitly defined in `mkdocs.yml`, follows learning path order
-- **Deployment:** GitHub Actions workflow triggers on push to `main`, deploys to GitHub Pages
+- **主题：** 使用 Material for MkDocs，支持深色与浅色模式切换以及搜索。
+- **导航：** 在 `mkdocs.yml` 中显式定义，按学习路径排序。
+- **部署：** 向 `main` 分支推送时触发 GitHub Actions 工作流，部署到 GitHub Pages。
 
-## Content Migration
+## 内容迁移
 
-- Existing README "Getting Started > Unboxing G1" section moves to `docs/getting-started/unboxing.md`
-- Existing "Connect to the robot" section moves to `docs/networking/connect-to-robot.md`
-- Existing "Download and compile the SDK" section moves to `docs/development/sdk-setup.md`
-- README.md updated to point to the wiki site
-- Placeholder pages include a brief topic description and "Work in progress" note
+- 将现有 README 中的“入门指南 > G1 开箱”部分移至 `docs/getting-started/unboxing.md`。
+- 将现有“连接机器人”部分移至 `docs/networking/connect-to-robot.md`。
+- 将现有“下载并编译 SDK”部分移至 `docs/development/sdk-setup.md`。
+- 更新 README.md，使其指向 Wiki 网站。
+- 占位页包含简短的主题说明和“内容编写中”提示。
 
-## Files to Create
+## 待创建文件
 
-- `mkdocs.yml` - MkDocs configuration
-- `requirements.txt` - Python dependencies (mkdocs-material)
-- `.github/workflows/deploy-wiki.yml` - GitHub Actions workflow
-- All `docs/**/*.md` pages listed above
+- `mkdocs.yml`：MkDocs 配置。
+- `requirements.txt`：Python 依赖（mkdocs-material）。
+- `.github/workflows/deploy-wiki.yml`：GitHub Actions 工作流。
+- 上面列出的所有 `docs/**/*.md` 页面。
