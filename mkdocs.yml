@@ -27,6 +27,10 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
+extra:
+  analytics:
+    provider: google
+    property: G-1E03P4K9QL
 
 markdown_extensions:
   - admonition
