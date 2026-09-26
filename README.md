@@ -9,7 +9,7 @@
 - 入门指南（开箱、遥控器使用、安全注意事项）
 - 网络连接（连接机器人、访问互联网）
 - 开发指南（SDK、灵巧手 SDK、ROS2、仿真）
-- 具身学习（开源数据集集合、VLA 模型与 G1 适配）
+- 具身学习（操作与动作数据集、VLA 模型、SONIC 与全身运动学习）
 - 硬件（规格、传感器）
 - 故障排查
 
@@ -23,7 +23,7 @@
 
 正文按实际操作流程组织，包含前置条件、配置步骤、结果检查和官方来源。硬件与固件存在版本差异，请先核对交付配置。
 
-操作学习资源见[开源数据集集合](docs/learning/datasets.md)和 [VLA：视觉、语言与动作](docs/learning/vla.md)，涵盖 G1 官方数据、跨机型数据、模型入口及训练评测建议。
+操作学习资源见[开源数据集集合](docs/learning/datasets.md)和 [VLA：视觉、语言与动作](docs/learning/vla.md)，涵盖 G1 官方数据、跨机型数据、模型入口及训练评测建议。[SONIC 与全身运动学习](docs/learning/whole-body.md)进一步介绍动作重定向、运动跟踪与 VLA 控制接口。
 
 ## 本地预览
 
@@ -36,8 +36,12 @@ python -m pip install -r requirements.txt
 mkdocs serve
 ```
 
-打开终端显示的本地地址即可预览。发布前运行 `mkdocs build --strict` 检查构建，页面内容位于 `docs/`，导航配置位于 `mkdocs.yml`。
+打开终端显示的本地地址即可预览。发布前运行 `mkdocs build --strict` 检查构建，再运行 `python scripts/check_seo.py` 验证页面元数据，页面内容位于 `docs/`，导航配置位于 `mkdocs.yml`。
 
 ## 参与完善
 
 补充操作经验时请注明机身自由度、末端配置、固件和软件版本，并链接对应的官方资料。步骤应写明执行主机和预期结果；涉及运动的示例应说明起始条件与停止方式。问题报告格式见[故障排查](docs/troubleshooting.md)。
+
+## 站点模板
+
+本站采用与[自动驾驶技术指南](https://yfrobotics.github.io/self-driving-handbook-cn/)一致的 Material for MkDocs 模板：白色页眉、红色强调色、Fira 字体、章节导读、中文搜索和页面更新日期。模板、数学渲染配置与 SEO 脚本改编自 [yfrobotics/self-driving-handbook-cn](https://github.com/yfrobotics/self-driving-handbook-cn)（[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）；改编部分沿用该许可，站点名称、导航与元数据已适配 G1 手册。

@@ -1,4 +1,11 @@
+---
+title: 宇树 G1 使用手册：从入门到具身学习
+description: 面向研究人员和开发者的宇树 G1 EDU 使用手册，涵盖开箱、网络、SDK、ROS2、仿真、硬件与传感器，以及 VLA、学习数据集和 SONIC 全身运动学习。
+---
+
 # 宇树 G1 使用手册
+
+--- A Practical Guide to the Unitree G1
 
 面向研究人员和开发者的宇树 G1 人形机器人实用指南。
 
@@ -15,22 +22,26 @@
 
 每一步先检查预期结果，再进入下一步。如果只做数据采集，可以先阅读 ROS2 和传感器页面；如果开发抓取任务，还需核对灵巧手和手臂配置。
 
-开展操作学习时，可从[开源数据集集合](learning/datasets.md)了解数据来源与格式，再阅读 [VLA](learning/vla.md)，规划模型适配、训练和评测流程。
+开展操作学习时，可从[开源数据集集合](learning/datasets.md)了解数据来源与格式，再阅读 [VLA](learning/vla.md)，规划模型适配、训练和评测流程。涉及人体动作、运动跟踪或边走边操作时，继续阅读 [SONIC 与全身运动学习](learning/whole-body.md)。
 
-## 目录
+## 本手册包含什么？
 
-- 入门：[开箱与首次使用](getting-started/unboxing.md)、[遥控器](getting-started/remote-control.md)、[安全指南](getting-started/safety.md)。
-- 网络：[连接机器人](networking/connect-to-robot.md)、[连接互联网](networking/connect-to-internet.md)。
-- 开发：[SDK 配置](development/sdk-setup.md)、[灵巧手 SDK](development/hand-sdk.md)、[ROS2 集成](development/ros2.md)、[仿真](development/simulation.md)。
-- 具身学习：[开源数据集集合](learning/datasets.md)、[VLA：视觉、语言与动作](learning/vla.md)。
-- 硬件：[规格与组件](hardware/specs.md)、[传感器与感知](hardware/sensors.md)。
-- [故障排查](troubleshooting.md)：按现象定位网络、软件、遥控和传感器问题。
+| 章节 | 内容 | 适合读者 |
+| --- | --- | --- |
+| [第一章：入门指南](getting-started/index.md) | 开箱、遥控器与安全流程 | 初次使用 G1 的读者 |
+| [第二章：网络连接](networking/index.md) | 连接机器人、SSH 与互联网访问 | 开发者与设备维护人员 |
+| [第三章：开发指南](development/index.md) | SDK、灵巧手、ROS2 与仿真 | 软件与控制开发者 |
+| [第四章：具身学习](learning/index.md) | 数据集、VLA、SONIC 与全身运动学习 | 算法开发者与研究人员 |
+| [第五章：硬件](hardware/index.md) | 规格、组件、传感器与感知 | 硬件与系统开发者 |
+| [第六章：故障排查](troubleshooting.md) | 网络、软件、遥控与传感器问题 | 调试与维护人员 |
+
+点击左侧章节名称可进入章节导读，再选择具体主题。
 
 ## 如何使用命令与资料
 
 命令主要按 Ubuntu 与 Bash 编写。执行前确认命令所在主机、系统版本、网卡名称和机器人配置；示例 IP、SSID、路径和话题应按页面说明替换。安装或编译成功并不表示运动程序已经适配实机。
 
-本轮资料核对日期为 2026-09-13，各页在相关步骤附有官方来源。本手册中的实验顺序和排查建议用于辅助工作；遥控按键、启动姿态、固件支持范围和硬件限值需要以交付设备对应的说明为准。
+基础页面资料核对日期为 2026-09-13；具身学习页面于 2026-09-26 补充了 VLA、动作数据与 SONIC 内容，各页在相关步骤附有官方来源。本手册中的实验顺序和排查建议用于辅助工作；遥控按键、启动姿态、固件支持范围和硬件限值需要以交付设备对应的说明为准。
 
 ## 关于本手册
 

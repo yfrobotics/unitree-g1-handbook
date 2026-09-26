@@ -83,3 +83,7 @@ ros2 topic list -t
 仿真中可用的理想位置或速度观测，在关闭实机原有运控服务后未必仍然可用；算法应明确每个观测的实际来源。[官方仿真与实机差异说明](https://github.com/unitreerobotics/unitree_mujoco#supported-unitree-sdk2-messages)
 
 继续阅读：[安全指南](../getting-started/safety.md) · [传感器与感知](../hardware/sensors.md)
+
+## 进一步开展学习实验
+
+验证仿真模型与控制接口后，可继续阅读 [VLA](../learning/vla.md)开展操作学习，或阅读 [SONIC 与全身运动学习](../learning/whole-body.md)了解运动跟踪、重定向和全身控制训练。不同训练框架使用自己的机器人模型、动作表示与依赖组合，应按对应项目建立环境。参考动作来源见[学习数据集](../learning/datasets.md)。
