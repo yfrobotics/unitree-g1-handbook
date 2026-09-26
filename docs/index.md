@@ -26,6 +26,8 @@ description: 面向研究人员和开发者的宇树 G1 EDU 使用手册，涵�
 
 ## 本手册包含什么？
 
+本实验室配置为 **G1 EDU 29-DoF + BrainCo2 双手 + Meta Quest 3**，使用原装相机与雷达。具体型号、软件提交和实测范围见[配置与验证记录](hardware/validated-configurations.md)。
+
 | 章节 | 内容 | 适合读者 |
 | --- | --- | --- |
 | [第一章：入门指南](getting-started/index.md) | 开箱、遥控器与安全流程 | 初次使用 G1 的读者 |
@@ -34,8 +36,17 @@ description: 面向研究人员和开发者的宇树 G1 EDU 使用手册，涵�
 | [第四章：具身学习](learning/index.md) | 数据集、VLA、SONIC 与全身运动学习 | 算法开发者与研究人员 |
 | [第五章：硬件](hardware/index.md) | 规格、组件、传感器与感知 | 硬件与系统开发者 |
 | [第六章：故障排查](troubleshooting.md) | 网络、软件、遥控与传感器问题 | 调试与维护人员 |
+| [第七章：维护与记录](maintenance/index.md) | 日常维护、备份与可复现实验模板 | 设备负责人和实验人员 |
 
 点击左侧章节名称可进入章节导读，再选择具体主题。
+
+## 从介绍到一个可复现实验
+
+- **第一次写程序：** [只读 SDK 示例](development/first-program.md) → [关节映射](hardware/joint-mapping.md) → [手臂 IK 与跟踪](development/arm-control.md)。
+- **使用实验室配置：** [BrainCo2](development/brainco2.md) → [Quest 3 遥操作](development/teleoperation.md) → [采集与转换演示](learning/data-collection.md)。
+- **开始学习实验：** [CPU 行为克隆与 ACT 入门](learning/first-policy.md) → [VLA](learning/vla.md)，或选择[行走强化学习](learning/locomotion-rl.md)。
+
+代码、配置、数据检查工具和模板随仓库提供。已运行的离线结果与待实机验证的流程分别标注；参与补充请阅读[贡献指南](contributing.md)。
 
 ## 如何使用命令与资料
 
@@ -45,6 +56,14 @@ description: 面向研究人员和开发者的宇树 G1 EDU 使用手册，涵�
 
 ## 关于本手册
 
-本手册由[云飞机器人实验室](https://yfrobotics.github.io/)编写，属于非官方资料，与宇树科技无关联，也未获得其背书。内容基于 G1 EDU 的实际使用经验，旨在补充官方文档中未充分覆盖的内容。
+本手册由云飞机器人实验室 ( [知乎](https://www.zhihu.com/column/yfworld) | [B站](https://space.bilibili.com/493264461) | [博客](https://yfrobotics.github.io/) | [YouTube](https://www.youtube.com/@yfrobotics) | [Ins](https://www.instagram.com/yfrobotics/) )编写，属于非官方资料，与宇树科技无关联，也未获得其背书。内容基于 G1 EDU 的实际使用经验，旨在补充官方文档中未充分覆盖的内容。
 
 发现错误或希望补充内容？欢迎在 [GitHub](https://github.com/yfrobotics/unitree-g1-handbook) 上参与贡献。
+
+## 赞助与支持
+
+如果本手册对你有帮助，欢迎通过支付宝或微信支付支持我们。你的支持会用于内容的持续更新与维护，非常感谢！
+
+<p align="left">
+  <img src="_static/payment-qr-codes.png" alt="支付宝 / 微信支付" width="520">
+</p>

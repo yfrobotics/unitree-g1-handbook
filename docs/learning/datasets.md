@@ -112,6 +112,8 @@ SONIC 官方采集工具可同步记录机器人状态、人体遥操作姿态�
 
 ## 自采数据应该记录什么
 
+实验室 G1_29 + BrainCo2 + 原装单 RGB 相机的具体录制、完整性检查与 LeRobot 转换步骤见[采集与转换演示](data-collection.md)。该配置使用 26 维动作，不使用 Dex3 数据的手部映射。
+
 使用 [xr_teleoperate](https://github.com/unitreerobotics/xr_teleoperate)等工具采集 G1 演示时，建议将以下信息与数据一起保存：
 
 ```text

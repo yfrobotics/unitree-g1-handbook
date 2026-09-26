@@ -2,3 +2,5 @@ site/
 .venv/
 __pycache__/
 *.py[cod]
+.venv-examples/
+build/

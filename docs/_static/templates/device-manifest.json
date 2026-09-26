@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "recorded_on": null,
+  "robot": {
+    "model": "G1 EDU",
+    "body_dof": 29,
+    "serial": null,
+    "firmware": null
+  },
+  "hands": {
+    "family": "BrainCo2 / Revo2",
+    "channels_per_hand": 6,
+    "left_serial": null,
+    "right_serial": null,
+    "firmware": null
+  },
+  "xr": {
+    "model": "Meta Quest 3",
+    "os_version": null
+  },
+  "camera": {
+    "configuration": "stock",
+    "model": null,
+    "serial": null,
+    "calibration_file": null
+  },
+  "lidar": {
+    "configuration": "stock",
+    "model": null,
+    "serial": null,
+    "driver": null
+  },
+  "compute": {
+    "model": null,
+    "architecture": null,
+    "os": null
+  },
+  "software_revisions": {},
+  "verification": {
+    "configuration_source": "owner confirmed body, hand, XR; sensor models pending identification",
+    "hardware_tested": false,
+    "operator": null,
+    "report": null
+  }
+}

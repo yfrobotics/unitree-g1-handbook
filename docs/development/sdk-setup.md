@@ -66,6 +66,8 @@ python -c "from unitree_sdk2py.core.channel import ChannelFactoryInitialize; pri
 
 ## 第一次通信验证
 
+可直接运行本仓库的[Python/C++ 只读状态程序](first-program.md)，查看关节与 IMU，并检查消息中断和 tick 冻结。
+
 安装验证只证明库可导入。接下来应按以下顺序验证应用：
 
 1. 确认运行主机、机器人网卡名称和目标 DDS 域。

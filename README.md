@@ -1,6 +1,6 @@
 # 宇树 G1 使用手册
 
-面向初学者的宇树 G1 使用指南。本手册由[云飞机器人实验室](https://yfrobotics.github.io/)编写，重点介绍 G1 EDU 版本，主要面向使用 G1 开展研究或开发的读者。
+面向初学者的宇树 G1 使用指南。本手册由云飞机器人实验室 ( [知乎](https://www.zhihu.com/column/yfworld) | [B站](https://space.bilibili.com/493264461) | [博客](https://yfrobotics.github.io/) | [YouTube](https://www.youtube.com/@yfrobotics) | [Ins](https://www.instagram.com/yfrobotics/) )编写，重点介绍 G1 EDU 版本，主要面向使用 G1 开展研究或开发的读者。
 
 **在 Wiki 上阅读完整手册：[https://yfrobotics.github.io/unitree-g1-handbook/](https://yfrobotics.github.io/unitree-g1-handbook/)**
 
@@ -12,6 +12,9 @@
 - 具身学习（操作与动作数据集、VLA 模型、SONIC 与全身运动学习）
 - 硬件（规格、传感器）
 - 故障排查
+- 可运行的只读 SDK、手臂 IK 与 CPU 行为克隆示例
+- G1 EDU 29-DoF / BrainCo2 / Quest 3 遥操作与单相机演示转换
+- 关节映射、配置验证、维护与实验记录模板
 
 ## 问题反馈
 
@@ -39,6 +42,8 @@ mkdocs serve
 打开终端显示的本地地址即可预览。发布前运行 `mkdocs build --strict` 检查构建，再运行 `python scripts/check_seo.py` 验证页面元数据，页面内容位于 `docs/`，导航配置位于 `mkdocs.yml`。
 
 ## 参与完善
+
+实验室配置与各流程的验证状态见[配置记录](docs/hardware/validated-configurations.md)。可运行代码见 [examples](examples/README.md)，设备与实验模板见[维护章节](docs/maintenance/records.md)。新增内容请遵循[贡献指南](CONTRIBUTING.md)。
 
 补充操作经验时请注明机身自由度、末端配置、固件和软件版本，并链接对应的官方资料。步骤应写明执行主机和预期结果；涉及运动的示例应说明起始条件与停止方式。问题报告格式见[故障排查](docs/troubleshooting.md)。
 

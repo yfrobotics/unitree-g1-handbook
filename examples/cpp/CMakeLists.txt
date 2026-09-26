@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(g1_read_state LANGUAGES CXX)
+find_package(unitree_sdk2 REQUIRED)
+add_executable(read_state read_state.cpp)
+target_compile_features(read_state PRIVATE cxx_std_17)
+target_link_libraries(read_state PRIVATE unitree_sdk2)

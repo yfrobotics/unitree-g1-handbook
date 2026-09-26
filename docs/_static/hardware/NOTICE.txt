@@ -1,0 +1,4 @@
+upstream-head-camera.jpg is an unmodified copy of img/real_head.jpg from unitreerobotics/xr_teleoperate at 817fb00c63cde15e5f24a0f8fa08e1e33ed89d3b.
+Copyright [2025] [HangZhou YuShu TECHNOLOGY CO.,LTD. ("Unitree Robotics")]
+Licensed under Apache License 2.0; see xr-teleoperate-LICENSE.txt in this directory and https://www.apache.org/licenses/LICENSE-2.0 .
+The photo shows an upstream additional camera setup, not this laboratory robot.

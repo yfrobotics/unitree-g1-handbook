@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "G1 episode sidecar metadata",
+  "type": "object",
+  "required": [
+    "episode_id",
+    "session_id",
+    "task",
+    "outcome",
+    "action",
+    "timing",
+    "device_manifest"
+  ],
+  "properties": {
+    "episode_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "session_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task": {
+      "type": "string",
+      "minLength": 1
+    },
+    "outcome": {
+      "enum": [
+        "success",
+        "failure",
+        "interrupted",
+        "unreviewed"
+      ]
+    },
+    "stop_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "device_manifest": {
+      "type": "string",
+      "minLength": 1
+    },
+    "action": {
+      "type": "object",
+      "required": [
+        "parts",
+        "dimensions",
+        "units",
+        "representation"
+      ],
+      "properties": {
+        "parts": {
+          "const": [
+            "left_arm",
+            "right_arm",
+            "left_ee",
+            "right_ee"
+          ]
+        },
+        "dimensions": {
+          "const": [
+            7,
+            7,
+            6,
+            6
+          ]
+        },
+        "units": {
+          "const": [
+            "rad",
+            "rad",
+            "normalized_0_1",
+            "normalized_0_1"
+          ]
+        },
+        "representation": {
+          "enum": [
+            "absolute_target"
+          ]
+        }
+      }
+    },
+    "timing": {
+      "type": "object",
+      "required": [
+        "nominal_fps",
+        "synchronization_verified",
+        "timestamp_source"
+      ],
+      "properties": {
+        "nominal_fps": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "synchronization_verified": {
+          "type": "boolean"
+        },
+        "timestamp_source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "split": {
+      "enum": [
+        "train",
+        "validation",
+        "test",
+        "unassigned"
+      ]
+    }
+  }
+}

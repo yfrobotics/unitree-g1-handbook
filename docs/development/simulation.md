@@ -86,4 +86,6 @@ ros2 topic list -t
 
 ## 进一步开展学习实验
 
+本仓库提供可在 CPU 上完成的[左臂 IK 与动力学跟踪](arm-control.md)和[合成示范行为克隆](../learning/first-policy.md)，包含脚本、固定依赖、结果曲线与验证范围。行走策略的观测、奖励和 sim-to-sim 流程见[行走强化学习](../learning/locomotion-rl.md)。
+
 验证仿真模型与控制接口后，可继续阅读 [VLA](../learning/vla.md)开展操作学习，或阅读 [SONIC 与全身运动学习](../learning/whole-body.md)了解运动跟踪、重定向和全身控制训练。不同训练框架使用自己的机器人模型、动作表示与依赖组合，应按对应项目建立环境。参考动作来源见[学习数据集](../learning/datasets.md)。

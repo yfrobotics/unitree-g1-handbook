@@ -86,16 +86,31 @@ nav:
   - '3. 开发指南':
       - development/index.md
       - SDK 配置: development/sdk-setup.md
+      - 第一个只读程序: development/first-program.md
+      - 手臂控制与逆运动学: development/arm-control.md
       - 灵巧手 SDK 与操作: development/hand-sdk.md
+      - BrainCo2 灵巧手: development/brainco2.md
+      - Quest 3 遥操作: development/teleoperation.md
       - ROS2 集成: development/ros2.md
       - 仿真: development/simulation.md
   - '4. 具身学习':
       - learning/index.md
+      - 采集与转换演示: learning/data-collection.md
+      - 第一个学习实验: learning/first-policy.md
+      - 行走强化学习: learning/locomotion-rl.md
       - 开源数据集集合: learning/datasets.md
       - VLA：视觉、语言与动作: learning/vla.md
       - SONIC 与全身运动学习: learning/whole-body.md
   - '5. 硬件':
       - hardware/index.md
       - 规格与组件: hardware/specs.md
+      - 硬件识别与照片: hardware/visual-guide.md
+      - 关节映射与坐标系: hardware/joint-mapping.md
+      - 配置与验证记录: hardware/validated-configurations.md
       - 传感器与感知: hardware/sensors.md
   - '6. 故障排查': troubleshooting.md
+  - '7. 维护与记录':
+      - maintenance/index.md
+      - 日常维护与更新: maintenance/maintenance.md
+      - 设备与实验模板: maintenance/records.md
+  - 参与完善: contributing.md

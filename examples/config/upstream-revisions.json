@@ -1,0 +1,52 @@
+{
+  "unitree_sdk2_python": {
+    "repository": "https://github.com/unitreerobotics/unitree_sdk2_python",
+    "commit": "814556d15970dd2ecf1c9984e845ca02ab07e206",
+    "reviewed_on": "2026-09-26"
+  },
+  "unitree_sdk2": {
+    "repository": "https://github.com/unitreerobotics/unitree_sdk2",
+    "commit": "63096d0ac0c5d2dec9d6e0c22cd5233410ca2f36",
+    "reviewed_on": "2026-09-26"
+  },
+  "unitree_mujoco": {
+    "repository": "https://github.com/unitreerobotics/unitree_mujoco",
+    "commit": "1eb6642e3f3fdfb7fb13a9794fd6a2dd93ea0e7d",
+    "reviewed_on": "2026-09-26"
+  },
+  "xr_teleoperate": {
+    "repository": "https://github.com/unitreerobotics/xr_teleoperate",
+    "commit": "817fb00c63cde15e5f24a0f8fa08e1e33ed89d3b",
+    "reviewed_on": "2026-09-26"
+  },
+  "teleimager": {
+    "repository": "https://github.com/unitreerobotics/teleimager",
+    "commit": "57cf2a40572227273fa001cd17833b755331ec97",
+    "reviewed_on": "2026-09-26"
+  },
+  "brainco_hand_service": {
+    "repository": "https://github.com/unitreerobotics/brainco_hand_service",
+    "commit": "d71996b6999edb2f838a3dca3d9621429a2ef966",
+    "reviewed_on": "2026-09-26"
+  },
+  "unitree_lerobot": {
+    "repository": "https://github.com/unitreerobotics/unitree_lerobot",
+    "commit": "41c2805742de879ddab2d8d6beaeaf215f876395",
+    "reviewed_on": "2026-09-26"
+  },
+  "lerobot": {
+    "repository": "https://github.com/huggingface/lerobot",
+    "commit": "a5b29d430105f5235eb05bbf2db5a0d747a869d6",
+    "reviewed_on": "2026-09-26"
+  },
+  "unitree_sim_isaaclab": {
+    "repository": "https://github.com/unitreerobotics/unitree_sim_isaaclab",
+    "commit": "e30c25b1dffdf92ada1d6c8c1fe9a47bdde0fecc",
+    "reviewed_on": "2026-09-26"
+  },
+  "unitree_rl_gym": {
+    "repository": "https://github.com/unitreerobotics/unitree_rl_gym",
+    "commit": "276801e46c5d433564f24658bac64f254b7d2d4b",
+    "reviewed_on": "2026-09-26"
+  }
+}

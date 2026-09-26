@@ -1,0 +1,61 @@
+{
+  "collection": {
+    "episodes": 30,
+    "frames": 3000,
+    "seed": 7,
+    "joints": [
+      "left_shoulder_pitch_joint",
+      "left_shoulder_roll_joint",
+      "left_shoulder_yaw_joint",
+      "left_elbow_joint",
+      "left_wrist_roll_joint",
+      "left_wrist_pitch_joint",
+      "left_wrist_yaw_joint"
+    ],
+    "dt": 0.02,
+    "split": {
+      "train": [
+        0,
+        19
+      ],
+      "validation": [
+        20,
+        24
+      ],
+      "test": [
+        25,
+        29
+      ]
+    },
+    "model_sha256": "423e28bd718b19f7a65cda539b6f794ddbb268b4b9bdbd85f4bd982b30729617",
+    "mujoco": "3.3.7",
+    "numpy": "2.2.6"
+  },
+  "training": {
+    "validation_action_mse": 2.685089079710399e-07
+  },
+  "evaluation": {
+    "test_episodes": 5,
+    "successes": 5,
+    "threshold_rad": 0.02,
+    "final_max_joint_errors_rad": [
+      0.009108875877456443,
+      0.008905415398940159,
+      0.009852370483064032,
+      0.010407776679373593,
+      0.008788333673228566
+    ],
+    "scope": "synthetic joint-reaching demonstrations; fixed-base MuJoCo; no vision, hand, or hardware"
+  },
+  "environment": {
+    "date": "2026-09-26",
+    "machine": "x86_64",
+    "python": "Python 3.12.3",
+    "model_repository": {
+      "repository": "https://github.com/unitreerobotics/unitree_mujoco",
+      "commit": "1eb6642e3f3fdfb7fb13a9794fd6a2dd93ea0e7d",
+      "reviewed_on": "2026-09-26"
+    },
+    "hardware_connected": false
+  }
+}
