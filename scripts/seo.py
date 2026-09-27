@@ -1,4 +1,4 @@
-"""Derive page descriptions and breadcrumbs from the published content/navigation."""
+"""Derive page descriptions, dates, and structured data from the published content/navigation."""
 
 from html.parser import HTMLParser
 import re
@@ -58,11 +58,28 @@ def on_page_content(html, page, config, files):
     # Material renders this attribute without autoescaping. Markup also prevents
     # double escaping when the same description passes through our template's |e.
     page.meta["description"] = escape(page.meta["description"])
+    # Sitemap <lastmod> defaults to the build date for every page; use the last
+    # commit that touched the page so crawlers can tell which pages changed.
+    modified = page.meta.get("git_revision_date_localized_raw_iso_date")
+    if modified:
+        page.update_date = modified
     return html
 
 
 def on_page_context(context, page, config, nav):
+    publisher = {"@type": "Organization", "name": config.site_author,
+                 "url": config.site_url}
     if page.is_homepage:
+        context["seo_schemas"] = [{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": config.site_name,
+            "alternateName": "Unitree G1 Handbook",
+            "url": config.site_url,
+            "description": page.meta["description"].unescape(),
+            "inLanguage": "zh-CN",
+            "publisher": publisher,
+        }]
         return context
     trail = [(config.site_name, config.site_url)]
     ancestors = []
@@ -76,12 +93,30 @@ def on_page_context(context, page, config, nav):
         if landing and landing.is_page and landing is not page:
             trail.append((landing.title, landing.canonical_url))
     trail.append((page.title, page.canonical_url))
-    context["seo_breadcrumbs"] = {
+    article = {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": page.meta.get("title") or page.title,
+        "description": page.meta["description"].unescape(),
+        "url": page.canonical_url,
+        "mainEntityOfPage": page.canonical_url,
+        "image": config.site_url + "_static/social-card.png",
+        "inLanguage": "zh-CN",
+        "about": {"@type": "Product", "name": "Unitree G1",
+                  "brand": {"@type": "Brand", "name": "Unitree Robotics"}},
+        "author": publisher,
+        "publisher": publisher,
+        "isPartOf": {"@type": "WebSite", "name": config.site_name,
+                     "url": config.site_url},
+    }
+    if page.update_date:
+        article["dateModified"] = page.update_date
+    context["seo_schemas"] = [article, {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": position, "name": name, "item": url}
             for position, (name, url) in enumerate(trail, 1)
         ],
-    }
+    }]
     return context

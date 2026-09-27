@@ -1,22 +1,57 @@
 {% extends "base.html" %}
 
+{#- Chinese site name plus English name, so the handbook also matches "Unitree G1" searches. #}
+{% macro seo_title() -%}
+  {%- if page.is_homepage -%}
+    {{ page.meta.title or config.site_name }} | Unitree G1 Handbook
+  {%- else -%}
+    {{ page.meta.title or page.title | striptags }} - {{ config.site_name }} | Unitree G1 Handbook
+  {%- endif -%}
+{%- endmacro %}
+
+{% block htmltitle %}
+  {% if page and page.title %}
+    <title>{{ seo_title() | striptags | e }}</title>
+  {% else %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}
+
 {% block extrahead %}
   {{ super() }}
   {% if page and page.canonical_url %}
-    {% set title = (page.meta.title or page.title) ~ ' - ' ~ config.site_name %}
+    {% set title = seo_title() %}
+    {% set image = config.site_url ~ '_static/social-card.png' %}
     <meta property="og:type" content="{{ 'website' if page.is_homepage else 'article' }}">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="{{ config.site_name | e }}">
     <meta property="og:title" content="{{ title | striptags | e }}">
     <meta property="og:description" content="{{ page.meta.description | e }}">
     <meta property="og:url" content="{{ page.canonical_url | e }}">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="{{ image }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ config.site_name | e }}">
+    {% if not page.is_homepage and page.update_date %}
+      <meta property="article:modified_time" content="{{ page.update_date }}">
+    {% endif %}
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ title | striptags | e }}">
     <meta name="twitter:description" content="{{ page.meta.description | e }}">
-    {% if seo_breadcrumbs %}
-      <script type="application/ld+json">{{ seo_breadcrumbs | tojson }}</script>
-    {% endif %}
+    <meta name="twitter:image" content="{{ image }}">
+    {% for schema in seo_schemas or [] %}
+      <script type="application/ld+json">{{ schema | tojson }}</script>
+    {% endfor %}
   {% else %}
     <meta name="robots" content="noindex">
+  {% endif %}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  {#- Load MathJax only on pages that contain formulas, keeping other pages fast. #}
+  {% if page and page.content and 'arithmatex' in page.content %}
+    <script src="{{ '_static/js/mathjaxhelper.js' | url }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   {% endif %}
 {% endblock %}

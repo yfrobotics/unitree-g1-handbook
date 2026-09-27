@@ -4,6 +4,7 @@ from collections import Counter
 from html.parser import HTMLParser
 import json
 from pathlib import Path
+import re
 from urllib.parse import unquote
 import xml.etree.ElementTree as ET
 
@@ -50,6 +51,14 @@ def main():
     home = "https://yfrobotics.github.io/unitree-g1-handbook/"
     assert home in urls, "Homepage missing from sitemap"
     assert len(urls) == len(set(urls)), "Duplicate sitemap URLs"
+    assert not any("/superpowers/" in url for url in urls), "Internal notes published"
+    lastmods = [node.text for node in ET.parse(site / "sitemap.xml").iterfind(
+        ".//{http://www.sitemaps.org/schemas/sitemap/0.9}lastmod"
+    )]
+    assert len(lastmods) == len(urls), "Every sitemap URL needs <lastmod>"
+    assert all(re.fullmatch(r"\d{4}-\d{2}-\d{2}", value) for value in lastmods), lastmods
+    image = home + "_static/social-card.png"
+    assert (site / "_static/social-card.png").is_file(), "Missing social card"
     descriptions, titles = [], []
     for url in urls:
         assert url.startswith(home), url
@@ -59,19 +68,30 @@ def main():
         assert head.canonicals == [url], f"Incorrect canonical: {url}"
         for key in ("description", "og:title", "og:description", "og:url",
                     "og:type", "og:locale", "og:site_name", "twitter:card",
-                    "twitter:title", "twitter:description"):
+                    "twitter:title", "twitter:description", "og:image",
+                    "twitter:image"):
             values = head.meta.get(key, [])
             assert len(values) == 1 and values[0].strip(), f"Invalid {key}: {url}"
         assert head.meta["og:url"] == [url], url
         assert head.meta["og:title"] == head.meta["twitter:title"] == [head.title], url
         assert head.meta["description"] == head.meta["og:description"] == head.meta["twitter:description"], url
+        assert head.meta["og:image"] == head.meta["twitter:image"] == [image], url
+        assert head.meta["twitter:card"] == ["summary_large_image"], url
         assert not any("noindex" in value for value in head.meta.get("robots", [])), url
         descriptions.extend(head.meta["description"])
         titles.append(head.title)
-        if url != home:
-            assert len(head.schemas) == 1, f"Missing breadcrumbs: {url}"
-            schema = json.loads(head.schemas[0])
-            assert schema["@type"] == "BreadcrumbList", url
+        schemas = {schema["@type"]: schema for schema in map(json.loads, head.schemas)}
+        if url == home:
+            assert list(schemas) == ["WebSite"], f"Missing WebSite schema: {url}"
+            assert schemas["WebSite"]["url"] == home
+        else:
+            assert list(schemas) == ["TechArticle", "BreadcrumbList"], f"Invalid schemas: {url}"
+            article = schemas["TechArticle"]
+            assert article["url"] == url and article["headline"], url
+            assert article["description"] == head.meta["description"][0], url
+            assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", article.get("dateModified", "")), url
+            assert head.meta.get("article:modified_time") == [article["dateModified"]], url
+            schema = schemas["BreadcrumbList"]
             crumbs = schema["itemListElement"]
             assert len(crumbs) >= 2 and crumbs[-1]["item"] == url, url
             assert crumbs[0]["item"] == home, url

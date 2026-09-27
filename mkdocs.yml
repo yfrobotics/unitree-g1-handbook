@@ -8,6 +8,10 @@ repo_name: yfrobotics/unitree-g1-handbook
 
 edit_uri: edit/main/docs/
 
+# Internal design notes are kept in the repo but not published or indexed.
+exclude_docs: |
+  superpowers/
+
 hooks:
   - scripts/seo.py
 
@@ -26,9 +30,9 @@ theme:
     accent: red
   include_search_page: false
   search_index_only: true
-  font:
-    text: Fira Sans
-    code: Fira Mono
+  # System fonts: Google Fonts is blocked or slow in mainland China and does
+  # not cover Chinese glyphs anyway.
+  font: false
 
 plugins:
   - search:
@@ -40,10 +44,6 @@ plugins:
       type: date
       locale: zh
       fallback_to_build_date: true
-
-extra_javascript:
-  - _static/js/mathjaxhelper.js
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
   analytics:
